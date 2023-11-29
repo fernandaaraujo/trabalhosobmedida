@@ -1,0 +1,276 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  color: #ffff;
+}
+
+nav {
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.services ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+/* Style for the checkmark */
+.services li:before {
+content: "\f00c"; /* Unicode for checkmark icon */
+font-family: "Font Awesome 5 Free"; /* Font family for Font Awesome icons */
+margin-right: 5px; /* Adjust space between checkmark and text if needed */
+}
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.active, .btn:hover {
+  background-color: #666;
+  color: white;
+  font-weight: 500;
+}
+
+.logo {
+  max-width: 10vw; /* Adjust logo size as needed */
+  margin-left: 5rem; /* Add margin for separation */
+}
+
+.small-text {
+  font-size: 12px; /* Adjust the font size as needed */
+  color: #fff; /* Text color */
+  font-family: Arial, sans-serif; /* Font family */
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+input[type="submit"] {
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #128C7E;
+}
+
+.widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* width: 60px; */
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background-color: #fff;
+  border-radius: 5rem;
+  padding: 0 1rem;
+}
+
+.widget p {
+  border-radius: 10%;
+}
+
+#whatsapp-widget {
+  border-radius: 50%;
+}
+
+#whatsapp-widget img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.home {
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+}
+
+.navbar {
+      background-color: #333;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+  }
+
+  /* Styles for the navbar links */
+  .navbar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* Hover effect */
+  .navbar a:hover {
+      background-color: #555;
+  }
+
+  /* Active (current) link */
+  .navbar a.active {
+      background-color: #ddd;
+      color: #333;
+      border-radius: 5px;
+  }
+
+  #contact h2 {
+    text-align: center;
+  }
+
+  #services {
+    box-shadow: 0px -1px 9px 5px rgba(97,93,97,0.48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact {
+display: flex;
+justify-content: space-around;
+align-items: flex-start;
+gap: 20px; /* Adjust the gap between columns */
+}
+
+/* Set both columns to have the same width */
+#contact div {
+flex: 1; /* Equal flex distribution */
+}
+
+ol {
+list-style: none;
+counter-reset: my-counter;
+padding-left: 0;
+}
+
+ol li {
+position: relative;
+padding-left: 30px;
+margin-bottom: 15px;
+font-size: 16px; /* Adjust font size */
+line-height: 1.5; /* Adjust line height */
+}
+
+ol li:before {
+content: counter(my-counter);
+counter-increment: my-counter;
+position: absolute;
+left: 0;
+top: 0;
+font-weight: bold;
+color: #ff6b6b; /* Counter color */
+}
+
+.bold {
+font-weight: bold; /* Make items 1 and 4 bold */
+}
+
+  #home,
+  .services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  #home img,
+  .services img {
+    max-width: 40vw;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    #home,
+    .services {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    #home img,
+    .services img {
+      max-width: 100%;
+    }
+  }

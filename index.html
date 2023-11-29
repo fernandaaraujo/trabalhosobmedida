@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/new-logo.png" />
+    <title>Trabalho Sob Medida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="img/logo.svg" alt="Logo" />
+      <nav>
+        <ul class="navbar">
+          <li><a class="active" href="index.html">Trabalho Acadêmico</a></li>
+          <li><a href="social-media.html">Social Media</a></li>
+          <li><a href="photography.html">Fotografia</a></li>
+          <li><a href="website.html">Criação de Site</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section id="home">
+        <div class="home">
+          <h1>Enfrentando desafios na elaboração do seu trabalho acadêmico?</h1>
+          <h2>Nós estamos aqui para ajudar!</h2>
+          <p>
+            Se você busca uma abordagem confiável e personalizada para superar os obstáculos acadêmicos, 
+            está no lugar certo! Bem-vindo ao Trabalho Sob Medida, o seu acesso a trabalhos acadêmicos de excelência, 
+            elaborados especialmente para atender às suas necessidades.
+          </p>
+        </div>
+        <img src="img/undraw_personal_notebook_re_d7dc.svg" />
+      </section>
+
+      <section id="services">
+        <h2>Serviços</h2>
+        <div class="services">
+          <img src="img/undraw_to_do_list_re_9nt7.svg" />
+          <ul>
+            <li><i class="fas fa-check"></i> TCC</li>
+            <li><i class="fas fa-check"></i> Redação</li>
+            <li><i class="fas fa-check"></i> Consultoria</li>
+            <li><i class="fas fa-check"></i> Questões e Exercícios</li>
+            <li><i class="fas fa-check"></i> Trabalhos Acadêmicos</li>
+            <li><i class="fas fa-check"></i> Dissertação de Mestrado</li>
+            <li><i class="fas fa-check"></i> Artigos Acadêmicos</li>
+            <li><i class="fas fa-check"></i> Resumos</li>
+            <li><i class="fas fa-check"></i> Relatórios e Resenhas</li>
+            <li><i class="fas fa-check"></i> Planos de Negócios</li>
+            <li><i class="fas fa-check"></i> Projetos de Pesquisa</li>
+            <li><i class="fas fa-check"></i> Produção de Conteúdo</li>
+            <li><i class="fas fa-check"></i> Referencial Teórico</li>
+            <li><i class="fas fa-check"></i> Estudo de Caso</li>
+            <li><i class="fas fa-check"></i> Crítica Literária</li>
+            <li><i class="fas fa-check"></i> Power Point</li>
+            <li><i class="fas fa-check"></i> Monografias e Teses</li>
+            <li><i class="fas fa-check"></i> Assistência em Matemática e Ciências</li>
+          </ul>    
+        </div>     
+      </section>
+
+      <section id="contact">
+        <div>
+          <h1>Como Funciona?</h1>
+          <ol>
+            <li><b>Faça seu Pedido:</b> Preencha um simples formulário e nos forneça detalhes sobre seu projeto acadêmico.</li>
+            <li><b>Personalização:</b> Nossa equipe escolhe o escritor mais adequado para o seu projeto, garantindo uma abordagem personalizada.</li>
+            <li><b>Acompanhamento em Tempo Real:</b> Fique atualizado sobre o progresso do seu trabalho acadêmico a qualquer momento.</li>
+            <li><b>Revisões Ilimitadas:</b> Se você precisar de ajustes, estamos aqui para refinar seu trabalho até que ele atenda perfeitamente às suas expectativas.</li>
+            <li><b>Entrega no Prazo:</b> Seu trabalho acadêmico personalizado será entregue a tempo, pronto para impressionar e elevar seu desempenho acadêmico.</li>
+          </ol>   
+        </div>
+        <div>
+          <h2>Entre em contato</h2>
+          <form action="mailto:trabalhosobmedidas@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Assunto:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <input type="submit" value="Enviar">
+          </form>
+        </div>
+      </section>
+
+      <div class="widget">
+        <p>Como podemos te ajudar?</p>
+          <a id="whatsapp-widget"
+          href="https://wa.me/31973349974?text=Olá, gostaria de mais informações"
+          target="_blank">
+          <img src="img/icons8-whatsapp.gif" alt="WhatsApp" />
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Trabalho Sob Medida</p>
+
+      <p class="small-text">
+        <a target="_blank" href="https://icons8.com/icon/7OeRNqg6S7Vf/whatsapp">
+          WhatsApp</a>
+        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </p>
+    </footer>
+
+    <script src="script.js">
+      const whatsappWidget = document.getElementById('whatsapp-widget');
+        whatsappWidget.href = 'https://wa.me/31973349974?text=Olá, gostaria de mais informações';
+
+      whatsappWidget.addEventListener('click', function(event) {
+        const newMessage = 'Oi, como posso te ajudar?';
+        const currentHref = event.target.href.split('?')[0];
+        event.target.href = `${currentHref}?text=${encodeURIComponent(newMessage)}`;
+      });
+    </script>
+  </body>
+</html>

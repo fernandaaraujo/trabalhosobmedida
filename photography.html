@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/new-logo.png" />
+    <title>Trabalho Sob Medida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="img/logo.svg" alt="Logo" />
+      <nav>
+        <ul class="navbar">
+          <li><a href="index.html">Trabalho Acadêmico</a></li>
+          <li><a href="social-media.html">Social Media</a></li>
+          <li><a class="active" href="photography.html">Fotografia</a></li>
+          <li><a href="website.html">Criação de Site</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section id="home">
+        <div class="home">
+          <h1>Enfrentando desafios em encontrar alguém para fotografar um evento?</h1>
+          <h2>Nós estamos aqui para ajudar!</h2>
+          <p>
+            Prepare-se para mergulhar em um mundo de imagens deslumbrantes e memórias eternas. 
+            Bem-vindo ao Trabalho Sob Medida, onde transformamos momentos em obras de arte. 
+            Nossa equipe apaixonada de fotógrafos está pronta para criar uma narrativa visual exclusiva para você, 
+            capturando cada momento especial com precisão e emoção.
+          </p>
+        </div>
+        <img src="img/undraw_moments_0y20.svg" />
+      </section>
+
+      <section id="services">
+        <h2>Serviços</h2>
+        <div class="services">
+          <img src="img/undraw_to_do_list_re_9nt7.svg" />
+          <ul>
+            <li><i class="fas fa-check"></i> Casamentos e Noivados</li>
+            <li><i class="fas fa-check"></i> Retratos e Ensaios</li>
+            <li><i class="fas fa-check"></i> Eventos Corporativos</li>
+            <li><i class="fas fa-check"></i> Fotografia de Produto</li>
+            <li><i class="fas fa-check"></i> Fotografia de Viagem</li>
+          </ul>    
+        </div>     
+      </section>
+
+      
+      <section id="contact">
+        <div>
+          <h1>Como Funciona?</h1>
+          <ol>
+            <li>
+              <b>Faça seu Pedido:</b> Preencha um simples formulário e nos forneça
+              detalhes sobre sua demanda.
+            </li>
+            <li>
+              <b>Personalização:</b> Nossa equipe escolhe o profissional mais adequado
+              para o seu projeto, garantindo uma abordagem personalizada.
+            </li>
+            <li>
+              <b>Acompanhamento em Tempo Real:</b> Fique atualizado sobre o progresso do
+              suas redes a qualquer momento.
+            </li>
+            <li>
+              <b>Revisões Ilimitadas:</b> Se você precisar de ajustes, estamos aqui para
+              refinar seu projeto até que ele atenda perfeitamente às suas
+              expectativas.
+            </li>
+            <li>
+              <b>Entrega no Prazo:</b> Seu projeto personalizado será entregue
+              a tempo, pronto para impressionar e elevar seu desempenho online.
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h2>Entre em contato</h2>
+          <form action="mailto:trabalhosobmedidas@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Assunto:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <input type="submit" value="Enviar">
+          </form>
+        </div>
+      </section>
+
+      <div class="widget">
+        <p>Como podemos te ajudar?</p>
+          <a id="whatsapp-widget"
+          href="https://wa.me/31973349974?text=Olá, gostaria de mais informações"
+          target="_blank">
+          <img src="img/icons8-whatsapp.gif" alt="WhatsApp" />
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Trabalho Sob Medida</p>
+
+      <p class="small-text">
+        <a target="_blank" href="https://icons8.com/icon/7OeRNqg6S7Vf/whatsapp">
+          WhatsApp</a>
+        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </p>
+    </footer>
+
+    <script src="script.js">
+      const whatsappWidget = document.getElementById('whatsapp-widget');
+        whatsappWidget.href = 'https://wa.me/31973349974?text=Olá, gostaria de mais informações';
+
+      whatsappWidget.addEventListener('click', function(event) {
+        const newMessage = 'Oi, como posso te ajudar?';
+        const currentHref = event.target.href.split('?')[0];
+        event.target.href = `${currentHref}?text=${encodeURIComponent(newMessage)}`;
+      });
+    </script>
+  </body>
+</html>
